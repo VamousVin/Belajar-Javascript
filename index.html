@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Menyalakan lampu -->
+    <h1 class="judul">Latihan JavaScript</h1>
+    <div class="lampu">
+        <br><br>
+        <h2>JavaScript Lampu</h2>
+        <button onclick="document.getElementById('gambar1').src='pic_bulboff.gif'">Matikan Lampu</button>
+        <img id="gambar1" src="pic_bulboff.gif" width="100px">
+        <button onclick="document.getElementById('gambar1').src='pic_bulbon.gif'">Nyalakan Lampu</button>
+    </div>
+<!-- Merubah tulisan dengan sekali klik -->
+<br>
+    <div class="change">
+        <h1 id="change">Kalimat ini akan berubah jika anda klik kotak dibawah ini!</h1>
+        <button class="tblamp" onclick="document.getElementById('change').innerHTML ='Kan berubah'">Klik disini</button>
+        <button class="tblamp" onclick="document.getElementById('change').innerHTML ='Kalimat ini akan berubah jika anda klik kotak dibawah ini'">Klik disini untuk merubah kembali</button>
+    </div>
+<!-- Menghilangkan objek -->
+<br>
+    <div>
+    <p id="teks">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae?</p>
+        <button onclick="button()">klik</button>
+    </div>
+<br>
+<br>
+<br>
+        <br><br><br><br><br><br><br><br><br>
+<div class="value">
+    <div class="kontener">
+        <div id="background" class="background">
+            <h1 class="pembuka">Latar Dinamis</h1>
+            <p class="penjelasan">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, fugiat.</p>
+        </div>
+        <input id="input" class="input">
+        <button id="tombol" onClick="klik()" >klik disini</button>
+
+        <div id="background2" class="background">
+            <h1 id="judul2" class="pembuka">Latar Dinamis</h1>
+            <p id="penjelasan2" class="penjelasan">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, fugiat.</p>
+        </div>
+        <select id="select">
+            <option disabled selected>pilih</option>
+            <option>background</option>
+            <option>judul</option>
+            <option>teks</option>
+        <input id="input2" class="input2">
+        </select>
+        <button onClick="klik2()">klik disini</button>
+    </div>
+</div>
+<script src="data.js"></script>
+</body>
+</html>
