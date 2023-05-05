@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RemakeJS</title>
+    <style>
+      .container {
+        display: grid;
+        place-items: center;
+      }
+
+      .bg {
+        background-color: crimson;
+        height: 150px;
+        border-radius: 20px;
+        width: 300px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Samklar Lampu -->
+      <div class="judul">
+        <h2>Remake Belajar Javascript</h2>
+      </div>
+      <div class="saklarLampu">
+        <button
+          onclick="document.getElementById('lampu').src='/asset/pic_bulbon.gif'"
+        >
+          Nyalakan Lampu
+        </button>
+        <img id="lampu" src="/asset/pic_bulboff.gif" alt="lampuOff" />
+        <button
+          onclick="document.getElementById('lampu').src='/asset/pic_bulboff.gif'"
+        >
+          Matikan Lampu
+        </button>
+      </div>
+
+      <!-- Merubah Konten -->
+      <h2 id="konten">
+        Kalimat ini akan berubah jika anda klik kotak dibawah ini!
+      </h2>
+      <button
+        onclick="document.getElementById('konten').innerHTML='kan berubah'"
+      >
+        Klik disini
+      </button>
+      <button
+        onclick="document.getElementById('konten').innerHTML = 'Kalimat ini akan berubah jika anda klik kotak dibawah ini!'"
+      >
+        Klik disini untuk merubah kembali
+      </button>
+
+      <!-- Menghilangkan konten -->
+      <div style="margin-top: 50px">
+        <h3 id="hasil"></h3>
+        <button id="button">Klik Saya</button>
+      </div>
+
+      <!-- Merubah style dari konten menggunakan input value -->
+      <div class="bg" id="bg">
+        <h1 class="judul">Ubah Background</h1>
+        <p>ubah background ini dengan mengisi form dibawah</p>
+      </div>
+      <input type="text" id="input" placeholder="contoh : red" />
+      <button id="konfirm" onclick="konfirm()">Konfirmasi</button>
+
+      <!-- Merbuah style dari konten tergantung opsi -->
+      <div class="bg" id="bg2">
+        <h1 id="judul2">Ubah dengan opsi</h1>
+        <p id="penjelasan2">
+          Klik pilihan opsi dan ubah yang kalian ingin ubah sesuai yang kalian
+          pilih
+        </p>
+      </div>
+      <select name="select" id="select">
+        <option disabled selected>Pilih Opsi</option>
+        <option>Background</option>
+        <option>Judul</option>
+        <option>Penjelasan</option>
+      </select>
+      <input type="text" id="input2" placeholder="contoh : red" />
+      <button id="konfirm2" onclick="konfirm2()">Konfirmasi</button>
+
+      <!-- Diskon minimal belanja -->
+      <div style="height: 200px">
+        <h1>Mesin Penghitung Diskon</h1>
+        <h3>Jika belanjaan diatas 100000</h3>
+        <form>
+          <label for="totalBelanja">Total Belanja :</label>
+          <input type="number" id="totalBelanja" name="totalBelanja" required />
+
+          <button type="submit">Hitung Diskon</button>
+        </form>
+
+        <div id="result"></div>
+      </div>
+
+      <div style="height: 300px">
+        <form>
+          <h1>Isi Form dibawah</h1>
+          <label>Nama :</label>
+          <input type="text" id="nama" /> <br />
+          <br />
+          <label>Email :</label>
+          <input type="email" id="email" /> <br />
+          <br />
+          <label></label>
+          <label>Password :</label>
+          <input type="password" id="password" /> <br />
+          <br />
+        </form>
+        <button id="submitForm">Submit</button>
+
+        <div id="resultNama" style="margin-top: 5px"></div>
+        <div id="resultEmail" style="margin-top: 5px"></div>
+        <div id="resultPass" style="margin-top: 5px"></div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
